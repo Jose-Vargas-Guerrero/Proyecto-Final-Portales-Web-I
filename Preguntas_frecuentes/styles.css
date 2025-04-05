@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo general del cuerpo */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Encabezado y navegación */
+  header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a.active {
+    text-decoration: underline;
+  }
+  
+  /* Contenedor principal */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para la sección FAQ */
+  .faq h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+  
+  .faq-question {
+    background: none;
+    border: none;
+    font-size: 1.1em;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .faq-question:focus {
+    outline: none;
+  }
+  
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 10px;
+    font-size: 1.5em;
+  }
+  
+  .faq-question[aria-expanded="true"]::after {
+    content: '-';
+  }
+  
+  .faq-answer {
+    padding: 10px 15px;
+  }
+  
+  .faq-answer p {
+    margin: 0;
+  }
+  
+  /* Pie de página */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+  }
+  
+  /* Diseño responsivo */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
