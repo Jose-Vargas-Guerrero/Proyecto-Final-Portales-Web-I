@@ -6,7 +6,66 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>aldeas sos</h1>
-    <h1>aldeas sos</h1>
+    <section id="nuestros-programas">
+        <h2>Nuestros Programas</h2>
+        <p>En nuestra organización desarrollamos programas enfocados en el bienestar integral de la niñez y adolescencia. Nos esforzamos por garantizar un entorno familiar protector y estable para cada niño y niña. Nuestros principales proyectos incluyen:</p>
+        <ul>
+          <li><strong>Cuidado Alternativo:</strong> Brindamos hogares seguros y amorosos a niños que han perdido el cuidado parental.</li>
+          <li><strong>Fortalecimiento Familiar:</strong> Trabajamos con familias en situación de vulnerabilidad para prevenir la pérdida del cuidado familiar.</li>
+          <li><strong>Jóvenes SOS:</strong> Apoyamos a los jóvenes en su transición hacia la vida independiente, mediante acompañamiento personal y formación profesional.</li>
+          <li><strong>Emergencias:</strong> Respondemos a crisis humanitarias proporcionando protección y asistencia inmediata a niños y familias afectadas.</li>
+        </ul>
+      </section>
+      
+      <section id="como-ayudar">
+        <h2>Cómo Ayudar</h2>
+        <p>Tu apoyo puede transformar la vida de muchos niños y niñas. Existen diversas maneras en las que puedes contribuir a nuestra causa:</p>
+        <ul>
+          <li><strong>Donaciones:</strong> Realiza aportes únicos o mensuales que nos permitan mantener y ampliar nuestros programas.</li>
+          <li><strong>Voluntariado:</strong> Únete a nuestro equipo como voluntario y participa activamente en actividades comunitarias y educativas.</li>
+          <li><strong>Eventos:</strong> Participa en eventos especiales de recaudación de fondos y sensibilización.</li>
+          <li><strong>Empresas Solidarias:</strong> Si representas a una empresa, puedes colaborar a través de alianzas estratégicas o donaciones corporativas.</li>
+        </ul>
+        <p>Cada acción cuenta. Juntos podemos garantizar un mejor futuro para la niñez en Honduras.</p>
+      
+        <button onclick="document.getElementById('form-contacto').scrollIntoView();">
+          Contáctanos
+        </button>
+      
+        <h3>Realiza una Donación</h3>
+        <form id="form-donacion" action="#" method="post">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required>
+      
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+      
+          <label for="monto">Monto a donar (Lps.):</label>
+          <input type="number" id="monto" name="monto" min="1" required>
+      
+          <label for="frecuencia">Frecuencia:</label>
+          <select id="frecuencia" name="frecuencia">
+            <option value="unica">Única vez</option>
+            <option value="mensual">Mensual</option>
+          </select>
+      
+          <button type="submit">Donar Ahora</button>
+        </form>
+      </section>
+      
+      <section id="form-contacto">
+        <h3>Formulario de Contacto</h3>
+        <form action="#" method="post">
+          <label for="contacto-nombre">Nombre:</label>
+          <input type="text" id="contacto-nombre" name="nombre" required>
+      
+          <label for="contacto-correo">Correo:</label>
+          <input type="email" id="contacto-correo" name="correo" required>
+      
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+      
+      
 </body>
 </html>
