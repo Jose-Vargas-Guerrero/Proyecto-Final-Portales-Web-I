@@ -1,0 +1,400 @@
+/* reset basico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* fuente que se usara en la pagina opcional */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* pagina de inicio styles */
+.hero {
+  background-color: orange;
+  height: 80vh;
+  max-width: 100vw;
+  background-image: url(/images/aldeas-sos-1.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.hero > div {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.085),
+    rgba(0, 0, 0, 0.781)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero > div > h1 {
+  color: white;
+  font-size: 2.4rem;
+  width: 50%;
+}
+
+/* noticias */
+.noticias {
+  padding: 2rem 1rem;
+  height: auto;
+  max-width: 100vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 1rem;
+}
+
+.cardNoticia {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 500px;
+  width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cardNoticia > img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cardNoticia > h3,
+p {
+  margin: 0.5rem 0.8rem;
+}
+
+.cardNoticia > h3 {
+  color: #00a7e4;
+  font-size: 1.5rem;
+}
+
+/* sobre nosotos styles */
+.serviciosContainer {
+  margin: 4rem 0;
+  height: auto;
+  max-width: 100vw;
+  margin: 8rem 0;
+}
+
+.serviciosContainer > h2 {
+  color: black;
+  margin-bottom: 8rem;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.servicioBox {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  transition: background-color ease 0.3s, color ease 0.3s;
+}
+
+.servicioBox:hover {
+  background-color: #00a7e4;
+}
+
+.servicioBox:hover h3 {
+  color: white;
+}
+
+.servicioBoxReverse {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  transition: background-color ease 0.3s, color ease 0.3s;
+}
+
+.servicioBoxReverse:hover {
+  background-color: #00a7e4;
+}
+
+.servicioBoxReverse:hover h3 {
+  color: white;
+}
+
+.servicioImage {
+  width: 50%;
+}
+
+.servicioInfo {
+  max-width: 50%;
+}
+
+.servicioInfo > h3 {
+  color: black;
+  font-weight: bold;
+  font-size: 2.7rem;
+  margin-left: 2rem;
+}
+
+.servicioInfo > p {
+  width: 90%;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  /* pagina de inicio styles */
+  .hero {
+    height: 80vh;
+    max-width: 100vw;
+  }
+
+  .hero > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero > div > h1 {
+    color: white;
+    font-size: 2rem;
+    width: 90%;
+  }
+
+  /* noticias */
+.noticias {
+    padding: 2rem 0.5rem;
+    height: auto;
+    max-width: 100vw;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem 0;
+  }
+  
+  .cardNoticia {
+    height: auto;
+    width: 350px;
+  }
+  
+  .cardNoticia > img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .cardNoticia > h3,
+  p {
+    margin: 1rem 1rem;
+  }
+  
+  .cardNoticia > h3 {
+    color: #00a7e4;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* pagina de inicio styles */
+  .hero {
+    height: 80vh;
+    max-width: 100vw;
+  }
+
+  .hero > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero > div > h1 {
+    color: white;
+    font-size: 2rem;
+    width: 90%;
+  }
+
+  /* noticias */
+.noticias {
+    padding: 2rem 0.5rem;
+    height: auto;
+    max-width: 100vw;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem 0;
+  }
+  
+  .cardNoticia {
+    height: auto;
+    width: 350px;
+  }
+  
+  .cardNoticia > img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .cardNoticia > h3,
+  p {
+    margin: 1rem 1rem;
+  }
+  
+  .cardNoticia > h3 {
+    color: #00a7e4;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para tablets */
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Estilos para laptops */
+}
+
+@media (min-width: 1281px) {
+  /* Estilos para pantallas grandes */
+}
+
+@media (min-width: 770px) and (max-width: 999px){
+
+    .servicioImage{
+      width: 50%;
+    }
+  
+    .servicioInfo{
+      max-width: 50%;
+    }
+  
+    .servicioInfo > h3{
+      color: var(--green);
+      font-weight: bold;
+      font-size: 2rem;
+      margin-left: 2rem;
+      margin: 0 2rem;
+    }
+  
+    .servicioInfo > p{
+      width: 90%;
+      font-size: 1rem;
+      margin-left: 2rem;
+      line-height: 1.4;
+    }
+    }
+  
+    /* Móviles grandes (576px a 768px) */
+    @media (min-width: 576px) and (max-width: 768px) {
+      .serviciosContainer > h2 {
+      margin-bottom: 4rem ;
+      font-size: 4rem;
+      text-align: center;
+    }
+  
+    .servicioBox{
+      height: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .servicioBoxReverse{
+      height: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .servicioImage{
+      width: 100%;
+    }
+  
+    .servicioInfo{
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+  
+    .servicioInfo > h3{
+      text-align: center;
+      font-size: 3.4rem;
+      margin-left: 0rem;
+    }
+  
+    .servicioInfo > p{
+      text-align: center;
+      width: 100%;
+      font-size: 1.2rem;
+      margin-left: 0rem;
+    }
+    }
+  
+  
+  
+    /* dispositivos muy pequenos como iphone 5 */
+    @media (min-width: 320px) and (max-width: 568px) {
+      
+    .serviciosContainer > h2 {
+      margin-bottom: 4rem ;
+      font-size: 4rem;
+      text-align: center;
+    }
+  
+    .servicioBox{
+      height: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .servicioBoxReverse{
+      height: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .servicioImage{
+      width: 100%;
+    }
+  
+    .servicioInfo{
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+  
+    .servicioInfo > h3{
+      text-align: center;
+      font-size: 2.7rem;
+      margin-left: 0rem;
+    }
+  
+    .servicioInfo > p{
+      text-align: center;
+      width: 100%;
+      font-size: 1rem;
+      margin-left: 0rem;
+    }
+    }
