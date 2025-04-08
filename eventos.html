@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Aldeas Infantiles SOS Honduras</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .eventos-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .eventos-filtros {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .eventos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .evento-card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .evento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .evento-fecha {
+            background-color: #00a7e4;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .evento-fecha .dia {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .evento-fecha .mes {
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .evento-contenido {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .evento-contenido h3 {
+            color: #00a7e4;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .evento-contenido p {
+            margin-bottom: 1rem;
+            color: #333333;
+            flex-grow: 1;
+        }
+
+        .evento-detalles {
+            margin-top: auto;
+        }
+
+        .evento-detalles p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: #666666;
+        }
+
+        .evento-detalles i {
+            color: #00a7e4;
+            width: 20px;
+        }
+
+        .evento-pasado {
+            opacity: 0.7;
+        }
+
+        .evento-pasado .evento-fecha {
+            background-color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            .eventos-filtros {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .eventos-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">Aldeas Infantiles SOS</a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/galeria.html">Galería</a></li>
+                <li><a href="/eventos.html">Eventos</a></li>
+                <li><a href="/#nuestros-programas">Programas</a></li>
+                <li><a href="/#como-ayudar">Cómo Ayudar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 40vh;">
+        <div>
+            <h1>Eventos</h1>
+        </div>
+    </section>
+
+    <!-- Eventos Section -->
+    <section class="eventos-section">
+        <div class="container">
+            <h2>Próximos Eventos y Actividades</h2>
+            <div class="eventos-filtros">
+                <button class="btn btn-primary filtro-btn" data-filter="todos">Todos los eventos</button>
+                <button class="btn btn-outline filtro-btn" data-filter="futuros">Próximos eventos</button>
+                <button class="btn btn-outline filtro-btn" data-filter="pasados">Eventos pasados</button>
+            </div>
+            <div class="eventos-grid">
+                <!-- Los eventos se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Aldeas Infantiles SOS Honduras</h3>
+                    <p>Trabajando por el bienestar de la niñez hondureña desde 1970</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos en redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Tegucigalpa, Honduras</p>
+                    <p><i class="fas fa-phone"></i> +504 2235-8000</p>
+                    <p><i class="fas fa-envelope"></i> info@aldeasinfantiles.hn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aldeas Infantiles SOS Honduras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Datos de ejemplo para los eventos
+        const eventos = [
+            {
+                titulo: "Inauguración Centro Comunitario",
+                descripcion: "Ceremonia de inauguración del nuevo Centro de Desarrollo Juvenil, Familiar y Comunitario en Tegucigalpa.",
+                fecha: "2024-05-15",
+                hora: "10:00 AM",
+                ubicacion: "Col. Kennedy, Tegucigalpa",
+                esPasado: false
+            },
+            {
+                titulo: "Feria de Emprendimiento Juvenil",
+                descripcion: "Exposición de proyectos desarrollados por jóvenes emprendedores de nuestros programas.",
+                fecha: "2024-06-20",
+                hora: "2:00 PM",
+                ubicacion: "Centro Comercial Mall Multiplaza, Tegucigalpa",
+                esPasado: false
+            },
+            {
+                titulo: "Firma de Convenio USAID-RTI",
+                descripcion: "Ceremonia de firma del convenio de subvención para el proyecto 'Progresa con educación'.",
+                fecha: "2024-03-15",
+                hora: "9:00 AM",
+                ubicacion: "Oficinas Centrales, Tegucigalpa",
+                esPasado: true
+            },
+            {
+                titulo: "Taller de Capacitación",
+                descripcion: "Taller de capacitación para educadores y cuidadores sobre desarrollo infantil temprano.",
+                fecha: "2024-03-01",
+                hora: "8:00 AM",
+                ubicacion: "Centro de Formación SOS, San Pedro Sula",
+                esPasado: true
+            }
+        ];
+
+        // Función para formatear la fecha
+        function formatearFecha(fechaStr) {
+            const fecha = new Date(fechaStr);
+            const meses = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
+            return {
+                dia: fecha.getDate(),
+                mes: meses[fecha.getMonth()]
+            };
+        }
+
+        // Función para crear una tarjeta de evento
+        function crearTarjetaEvento(evento) {
+            const fechaFormateada = formatearFecha(evento.fecha);
+            const eventoCard = document.createElement('div');
+            eventoCard.className = `evento-card ${evento.esPasado ? 'evento-pasado' : ''}`;
+            eventoCard.dataset.tipo = evento.esPasado ? 'pasado' : 'futuro';
+            
+            eventoCard.innerHTML = `
+                <div class="evento-fecha">
+                    <p class="dia">${fechaFormateada.dia}</p>
+                    <p class="mes">${fechaFormateada.mes}</p>
+                </div>
+                <div class="evento-contenido">
+                    <h3>${evento.titulo}</h3>
+                    <p>${evento.descripcion}</p>
+                    <div class="evento-detalles">
+                        <p><i class="far fa-clock"></i> ${evento.hora}</p>
+                        <p><i class="fas fa-map-marker-alt"></i> ${evento.ubicacion}</p>
+                    </div>
+                </div>
+            `;
+            return eventoCard;
+        }
+
+        // Cargar eventos en la página
+        const eventosGrid = document.querySelector('.eventos-grid');
+        eventos.forEach(evento => {
+            eventosGrid.appendChild(crearTarjetaEvento(evento));
+        });
+
+        // Funcionalidad de filtros
+        document.querySelectorAll('.filtro-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Actualizar estado activo de los botones
+                document.querySelectorAll('.filtro-btn').forEach(b => {
+                    b.classList.remove('btn-primary');
+                    b.classList.add('btn-outline');
+                });
+                btn.classList.remove('btn-outline');
+                btn.classList.add('btn-primary');
+
+                // Filtrar eventos
+                const filtro = btn.dataset.filter;
+                document.querySelectorAll('.evento-card').forEach(card => {
+                    if (filtro === 'todos' || 
+                        (filtro === 'futuros' && card.dataset.tipo === 'futuro') ||
+                        (filtro === 'pasados' && card.dataset.tipo === 'pasado')) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Navbar toggle functionality
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+                navbarMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 

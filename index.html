@@ -11,11 +11,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">Aldeas Infantiles SOS</a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/galeria.html">Galería</a></li>
+                <li><a href="/eventos.html">Eventos</a></li>
+                <li><a href="#nuestros-programas">Programas</a></li>
+                <li><a href="#como-ayudar">Cómo Ayudar</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
       <div>
         <h1>Nos enfocamos en mejorar el futuro de los niños Hondureños y defender los derechos que todos ellos tienen</h1>
-        <a href="#nuestros-programas" class="btn">Conoce más</a>
       </div>
     </section>
 
@@ -267,6 +283,21 @@
           currentIndex = Math.min(currentIndex + 1, cards.length - 1);
           updateCarousel();
         });
+      });
+
+      // Navbar toggle functionality
+      const navbarToggle = document.querySelector('.navbar-toggle');
+      const navbarMenu = document.querySelector('.navbar-menu');
+
+      navbarToggle.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+          navbarMenu.classList.remove('active');
+        }
       });
     </script>
 </body>
