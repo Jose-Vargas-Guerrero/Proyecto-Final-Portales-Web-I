@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas Solidarias - Aldeas Infantiles SOS Honduras</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .empresas-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .beneficios-empresas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .beneficio-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .beneficio-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .beneficio-card i {
+            font-size: 3rem;
+            color: #00a7e4;
+            margin-bottom: 1.5rem;
+        }
+
+        .beneficio-card h3 {
+            color: #00a7e4;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        .alianzas-section {
+            background-color: #f8f8f8;
+            padding: 4rem 0;
+        }
+
+        .tipos-alianza {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tipo-alianza {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .tipo-alianza h3 {
+            color: #00a7e4;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .tipo-alianza h3 i {
+            color: #00a7e4;
+        }
+
+        .tipo-alianza ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tipo-alianza ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .tipo-alianza ul li::before {
+            content: '•';
+            color: #00a7e4;
+            position: absolute;
+            left: 0;
+        }
+
+        .contacto-empresas {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .contacto-empresas h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .contacto-empresas p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .beneficios-empresas {
+                grid-template-columns: 1fr;
+            }
+
+            .tipos-alianza {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">Aldeas Infantiles SOS</a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/galeria.html">Galería</a></li>
+                <li><a href="/eventos.html">Eventos</a></li>
+                <li><a href="/faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="/donaciones.html">Donar</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+                <li><a href="/acerca.html">Acerca de</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 40vh;">
+        <div>
+            <h1>Empresas Solidarias</h1>
+            <p>Construyendo un futuro mejor juntos</p>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section class="empresas-section">
+        <div class="container">
+            <h2>Beneficios para Empresas</h2>
+            <div class="beneficios-empresas">
+                <div class="beneficio-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Responsabilidad Social</h3>
+                    <p>Fortalece tu compromiso con la comunidad y contribuye al desarrollo social de Honduras.</p>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Imagen Corporativa</h3>
+                    <p>Mejora la reputación de tu empresa y fortalece los vínculos con tus grupos de interés.</p>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Reconocimiento</h3>
+                    <p>Obtén reconocimiento como empresa solidaria y genera un impacto positivo en la sociedad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alianzas Section -->
+    <section class="alianzas-section">
+        <div class="container">
+            <h2>Tipos de Alianzas</h2>
+            <div class="tipos-alianza">
+                <div class="tipo-alianza">
+                    <h3><i class="fas fa-gift"></i> Donaciones Corporativas</h3>
+                    <ul>
+                        <li>Donaciones monetarias mensuales o anuales</li>
+                        <li>Donaciones en especie (productos o servicios)</li>
+                        <li>Programas de matching (igualación de donaciones)</li>
+                        <li>Campañas específicas de recaudación</li>
+                    </ul>
+                </div>
+                <div class="tipo-alianza">
+                    <h3><i class="fas fa-hands-helping"></i> Voluntariado Corporativo</h3>
+                    <ul>
+                        <li>Programas de voluntariado para empleados</li>
+                        <li>Mentorías profesionales</li>
+                        <li>Actividades recreativas y educativas</li>
+                        <li>Proyectos especiales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section class="contacto-empresas">
+        <div class="container">
+            <h2>¿Interesado en ser una Empresa Solidaria?</h2>
+            <p>Contáctanos para conocer más sobre cómo tu empresa puede unirse a nuestra causa y hacer la diferencia en la vida de miles de niños y jóvenes.</p>
+            <a href="/contacto.html?asunto=empresas" class="btn btn-primary">Contactar para Alianzas</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Aldeas Infantiles SOS Honduras</h3>
+                    <p>Trabajando por el bienestar de la niñez hondureña desde 1970</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos en redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Tegucigalpa, Honduras</p>
+                    <p><i class="fas fa-phone"></i> +504 2235-8000</p>
+                    <p><i class="fas fa-envelope"></i> info@aldeasinfantiles.hn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aldeas Infantiles SOS Honduras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar toggle functionality
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+                navbarMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 

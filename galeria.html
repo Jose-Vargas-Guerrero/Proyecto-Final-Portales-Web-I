@@ -94,7 +94,6 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="/" class="navbar-brand">Aldeas Infantiles SOS</a>
@@ -111,30 +110,25 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" style="height: 40vh;">
         <div>
             <h1>Galería de Fotos</h1>
         </div>
     </section>
 
-    <!-- Galería Section -->
     <section class="galeria-section">
         <div class="container">
             <h2>Nuestros Momentos</h2>
             <div class="galeria-grid">
-                <!-- Las imágenes se cargarán dinámicamente con JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Lightbox -->
     <div class="lightbox">
         <span class="lightbox-close">&times;</span>
         <img src="" alt="Imagen ampliada">
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -145,10 +139,10 @@
                 <div class="footer-social">
                     <h4>Síguenos en redes sociales</h4>
                     <div class="social-icons">
-                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-contact">
@@ -165,7 +159,6 @@
     </footer>
 
     <script>
-        // Navbar toggle functionality
         const navbarToggle = document.querySelector('.navbar-toggle');
         const navbarMenu = document.querySelector('.navbar-menu');
 
@@ -173,14 +166,12 @@
             navbarMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
                 navbarMenu.classList.remove('active');
             }
         });
 
-        // Datos de ejemplo para la galería
         const imagenes = [
             { url: 'https://www.aldeasinfantiles.org.hn/getmedia/71294cab-67eb-4a2b-b4e1-e30330af9c9d/canarias-1_1.jpg', alt: 'Centro Comunitario' },
             { url: 'https://www.aldeasinfantiles.org.hn/getmedia/d17aba4c-dec1-4b6b-89f2-33346decc57b/WhatsApp-Image-2024-08-15-at-2-55-59-PM-(1).jpeg', alt: 'Firma de Acuerdo' },
@@ -192,7 +183,6 @@
             { url: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846', alt: 'Voluntariado' }
         ];
 
-        // Cargar imágenes en la galería
         const galeriaGrid = document.querySelector('.galeria-grid');
         imagenes.forEach(imagen => {
             const item = document.createElement('div');
@@ -201,7 +191,6 @@
             galeriaGrid.appendChild(item);
         });
 
-        // Funcionalidad del Lightbox
         const lightbox = document.querySelector('.lightbox');
         const lightboxImg = lightbox.querySelector('img');
         const lightboxClose = document.querySelector('.lightbox-close');

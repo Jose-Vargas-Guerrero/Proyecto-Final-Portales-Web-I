@@ -123,7 +123,6 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="/" class="navbar-brand">Aldeas Infantiles SOS</a>
@@ -140,14 +139,12 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" style="height: 40vh;">
         <div>
             <h1>Eventos</h1>
         </div>
     </section>
 
-    <!-- Eventos Section -->
     <section class="eventos-section">
         <div class="container">
             <h2>Próximos Eventos y Actividades</h2>
@@ -157,12 +154,10 @@
                 <button class="btn btn-outline filtro-btn" data-filter="pasados">Eventos pasados</button>
             </div>
             <div class="eventos-grid">
-                <!-- Los eventos se cargarán dinámicamente con JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -173,10 +168,10 @@
                 <div class="footer-social">
                     <h4>Síguenos en redes sociales</h4>
                     <div class="social-icons">
-                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-contact">
@@ -193,7 +188,6 @@
     </footer>
 
     <script>
-        // Datos de ejemplo para los eventos
         const eventos = [
             {
                 titulo: "Inauguración Centro Comunitario",
@@ -229,7 +223,6 @@
             }
         ];
 
-        // Función para formatear la fecha
         function formatearFecha(fechaStr) {
             const fecha = new Date(fechaStr);
             const meses = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
@@ -239,7 +232,6 @@
             };
         }
 
-        // Función para crear una tarjeta de evento
         function crearTarjetaEvento(evento) {
             const fechaFormateada = formatearFecha(evento.fecha);
             const eventoCard = document.createElement('div');
@@ -263,16 +255,13 @@
             return eventoCard;
         }
 
-        // Cargar eventos en la página
         const eventosGrid = document.querySelector('.eventos-grid');
         eventos.forEach(evento => {
             eventosGrid.appendChild(crearTarjetaEvento(evento));
         });
 
-        // Funcionalidad de filtros
         document.querySelectorAll('.filtro-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                // Actualizar estado activo de los botones
                 document.querySelectorAll('.filtro-btn').forEach(b => {
                     b.classList.remove('btn-primary');
                     b.classList.add('btn-outline');
@@ -280,7 +269,6 @@
                 btn.classList.remove('btn-outline');
                 btn.classList.add('btn-primary');
 
-                // Filtrar eventos
                 const filtro = btn.dataset.filter;
                 document.querySelectorAll('.evento-card').forEach(card => {
                     if (filtro === 'todos' || 
@@ -294,7 +282,6 @@
             });
         });
 
-        // Navbar toggle functionality
         const navbarToggle = document.querySelector('.navbar-toggle');
         const navbarMenu = document.querySelector('.navbar-menu');
 
@@ -302,7 +289,6 @@
             navbarMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
                 navbarMenu.classList.remove('active');
