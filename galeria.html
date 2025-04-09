@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Aldeas Infantiles SOS Honduras</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .galeria-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            padding: 0 2rem;
+        }
+
+        .galeria-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .galeria-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        @media (max-width: 1024px) {
+            .galeria-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .galeria-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">Aldeas Infantiles SOS</a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/galeria.html">Galería</a></li>
+                <li><a href="/eventos.html">Eventos</a></li>
+                <li><a href="/#nuestros-programas">Programas</a></li>
+                <li><a href="/#como-ayudar">Cómo Ayudar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" style="height: 40vh;">
+        <div>
+            <h1>Galería de Fotos</h1>
+        </div>
+    </section>
+
+    <section class="galeria-section">
+        <div class="container">
+            <h2>Nuestros Momentos</h2>
+            <div class="galeria-grid">
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Imagen ampliada">
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Aldeas Infantiles SOS Honduras</h3>
+                    <p>Trabajando por el bienestar de la niñez hondureña desde 1970</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos en redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Tegucigalpa, Honduras</p>
+                    <p><i class="fas fa-phone"></i> +504 2235-8000</p>
+                    <p><i class="fas fa-envelope"></i> info@aldeasinfantiles.hn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aldeas Infantiles SOS Honduras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+                navbarMenu.classList.remove('active');
+            }
+        });
+
+        const imagenes = [
+            { url: 'https://www.aldeasinfantiles.org.hn/getmedia/71294cab-67eb-4a2b-b4e1-e30330af9c9d/canarias-1_1.jpg', alt: 'Centro Comunitario' },
+            { url: 'https://www.aldeasinfantiles.org.hn/getmedia/d17aba4c-dec1-4b6b-89f2-33346decc57b/WhatsApp-Image-2024-08-15-at-2-55-59-PM-(1).jpeg', alt: 'Firma de Acuerdo' },
+            { url: 'https://www.aldeasinfantiles.org.hn/getmedia/c1a75764-a434-48b6-bedb-e7ec1517fb49/DIRECTOR-NACIONAL_1.jpeg', alt: 'Director Nacional' },
+            { url: 'https://proceso.hn/wp-content/uploads/2015/05/1cda761ce8c73ccfd25f659f64ef12bd.jpg', alt: 'Equipo de trabajo' },
+            { url: 'https://magazinedebut.com/wp-content/uploads/2024/04/IMG_1352-min-scaled.jpg', alt: 'Actividades con niños' },
+            { url: 'https://www.aldeasinfantiles.org/getmedia/2204f34d-bbec-4a5d-853a-c7e19d75513f/IMG11.jpg', alt: 'Nuestra organización' },
+            { url: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c', alt: 'Donaciones' },
+            { url: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846', alt: 'Voluntariado' }
+        ];
+
+        const galeriaGrid = document.querySelector('.galeria-grid');
+        imagenes.forEach(imagen => {
+            const item = document.createElement('div');
+            item.className = 'galeria-item';
+            item.innerHTML = `<img src="${imagen.url}" alt="${imagen.alt}">`;
+            galeriaGrid.appendChild(item);
+        });
+
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+
+        document.querySelectorAll('.galeria-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                const imgAlt = item.querySelector('img').alt;
+                lightboxImg.src = imgSrc;
+                lightboxImg.alt = imgAlt;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 

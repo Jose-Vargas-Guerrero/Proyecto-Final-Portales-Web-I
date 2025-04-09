@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntariado - Aldeas Infantiles SOS Honduras</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .voluntariado-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .beneficio-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .beneficio-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .beneficio-card i {
+            font-size: 3rem;
+            color: #00a7e4;
+            margin-bottom: 1.5rem;
+        }
+
+        .beneficio-card h3 {
+            color: #00a7e4;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        .pasos-section {
+            background-color: #f8f8f8;
+            padding: 4rem 0;
+        }
+
+        .pasos-timeline {
+            max-width: 800px;
+            margin: 3rem auto;
+            position: relative;
+        }
+
+        .paso-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .paso-numero {
+            width: 40px;
+            height: 40px;
+            background: #00a7e4;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .paso-contenido h3 {
+            color: #00a7e4;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .aplicar-section {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .aplicar-section h2 {
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .beneficios-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .paso-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">Aldeas Infantiles SOS</a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/galeria.html">Galería</a></li>
+                <li><a href="/eventos.html">Eventos</a></li>
+                <li><a href="/faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="/donaciones.html">Donar</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+                <li><a href="/acerca.html">Acerca de</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 40vh;">
+        <div>
+            <h1>Voluntariado</h1>
+            <p>Únete a nuestra familia y ayuda a transformar vidas</p>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section class="voluntariado-section">
+        <div class="container">
+            <h2>Beneficios de ser Voluntario</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Impacto Social</h3>
+                    <p>Contribuye directamente al desarrollo y bienestar de niños y jóvenes en situación vulnerable.</p>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Desarrollo Personal</h3>
+                    <p>Adquiere nuevas habilidades, experiencia y crece personal y profesionalmente.</p>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Reconocimiento</h3>
+                    <p>Recibe certificación por tu labor voluntaria y forma parte de una red global.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pasos Section -->
+    <section class="pasos-section">
+        <div class="container">
+            <h2>¿Cómo ser Voluntario?</h2>
+            <div class="pasos-timeline">
+                <div class="paso-item">
+                    <div class="paso-numero">1</div>
+                    <div class="paso-contenido">
+                        <h3>Registro Inicial</h3>
+                        <p>Completa el formulario de registro con tus datos personales y áreas de interés.</p>
+                    </div>
+                </div>
+                <div class="paso-item">
+                    <div class="paso-numero">2</div>
+                    <div class="paso-contenido">
+                        <h3>Entrevista</h3>
+                        <p>Participa en una entrevista para conocer mejor tus motivaciones y habilidades.</p>
+                    </div>
+                </div>
+                <div class="paso-item">
+                    <div class="paso-numero">3</div>
+                    <div class="paso-contenido">
+                        <h3>Capacitación</h3>
+                        <p>Recibe la formación necesaria para desarrollar tu labor como voluntario.</p>
+                    </div>
+                </div>
+                <div class="paso-item">
+                    <div class="paso-numero">4</div>
+                    <div class="paso-contenido">
+                        <h3>Inicio de Actividades</h3>
+                        <p>Comienza tu experiencia como voluntario en el programa asignado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aplicar Section -->
+    <section class="aplicar-section">
+        <div class="container">
+            <h2>¿Listo para ser parte del cambio?</h2>
+            <p>Completa nuestro formulario de aplicación y únete a nuestra familia de voluntarios</p>
+            <a href="/contacto.html?asunto=voluntariado" class="btn btn-primary">Aplicar como Voluntario</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Aldeas Infantiles SOS Honduras</h3>
+                    <p>Trabajando por el bienestar de la niñez hondureña desde 1970</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos en redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Tegucigalpa, Honduras</p>
+                    <p><i class="fas fa-phone"></i> +504 2235-8000</p>
+                    <p><i class="fas fa-envelope"></i> info@aldeasinfantiles.hn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aldeas Infantiles SOS Honduras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar toggle functionality
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+                navbarMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 

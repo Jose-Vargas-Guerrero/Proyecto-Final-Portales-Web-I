@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - Aldeas Infantiles SOS Honduras</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .acerca-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .mision-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .mision-card,
+        .vision-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .mision-card i,
+        .vision-card i {
+            font-size: 3rem;
+            color: #00a7e4;
+            margin-bottom: 1.5rem;
+        }
+
+        .mision-card h3,
+        .vision-card h3 {
+            color: #00a7e4;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        .mision-card p,
+        .vision-card p {
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .equipo-section {
+            background-color: #f8f8f8;
+            padding: 4rem 0;
+        }
+
+        .equipo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .miembro-card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .miembro-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .miembro-imagen {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .miembro-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .miembro-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .miembro-info h3 {
+            color: #00a7e4;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .miembro-info p {
+            color: #666666;
+            margin-bottom: 1rem;
+        }
+
+        .historia-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .historia-timeline {
+            max-width: 800px;
+            margin: 3rem auto;
+            position: relative;
+        }
+
+        .historia-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #00a7e4;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50%;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 50%;
+        }
+
+        .timeline-content {
+            width: 80%;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            right: -40px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #00a7e4;
+            border-radius: 50%;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: auto;
+            left: -40px;
+        }
+
+        .timeline-content h3 {
+            color: #00a7e4;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: #333333;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .mision-vision {
+                grid-template-columns: 1fr;
+            }
+
+            .equipo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .historia-timeline::before {
+                left: 0;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                justify-content: flex-start;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .timeline-content::before {
+                left: -40px;
+                right: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .equipo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">Aldeas Infantiles SOS</a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/galeria.html">Galería</a></li>
+                <li><a href="/eventos.html">Eventos</a></li>
+                <li><a href="/faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="/donaciones.html">Donar</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+                <li><a href="/acerca.html">Acerca de</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 40vh;">
+        <div>
+            <h1>Acerca de Nosotros</h1>
+        </div>
+    </section>
+
+    <!-- Misión y Visión Section -->
+    <section class="acerca-section">
+        <div class="container">
+            <div class="mision-vision">
+                <div class="mision-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Nuestra Misión</h3>
+                    <p>Construimos familias para niños necesitados, los ayudamos a formar su propio futuro y participamos en el desarrollo de sus comunidades. Creamos un entorno familiar para niños que han perdido el cuidado parental o están en riesgo de perderlo.</p>
+                </div>
+                <div class="vision-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Nuestra Visión</h3>
+                    <p>Cada niño pertenece a una familia y crece con amor, respeto y seguridad. Trabajamos para que ningún niño tenga que crecer solo, fortaleciendo a las familias vulnerables y proporcionando entornos protectores donde puedan desarrollarse plenamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historia Section -->
+    <section class="historia-section">
+        <div class="container">
+            <h2>Nuestra Historia</h2>
+            <div class="historia-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>1970</h3>
+                        <p>Fundación de Aldeas Infantiles SOS en Honduras, comenzando operaciones en Tegucigalpa con el objetivo de brindar hogares a niños en situación de vulnerabilidad.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>1985</h3>
+                        <p>Expansión a otras ciudades del país, abriendo nuevas aldeas en San Pedro Sula y Choluteca, ampliando nuestra capacidad de atención.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2000</h3>
+                        <p>Implementación de programas de fortalecimiento familiar y prevención del abandono infantil, trabajando directamente con las comunidades.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2010</h3>
+                        <p>Desarrollo de programas de juventud y empleabilidad, enfocados en la preparación de jóvenes para su vida independiente.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2024</h3>
+                        <p>Continuamos creciendo y adaptándonos a las necesidades actuales, implementando nuevos programas y metodologías para el cuidado infantil.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo Section -->
+    <section class="equipo-section">
+        <div class="container">
+            <h2>Nuestro Equipo</h2>
+            <div class="equipo-grid">
+                <div class="miembro-card">
+                    <div class="miembro-imagen">
+                        <img src="https://www.aldeasinfantiles.org.hn/getmedia/c1a75764-a434-48b6-bedb-e7ec1517fb49/DIRECTOR-NACIONAL_1.jpeg" alt="Director Nacional">
+                    </div>
+                    <div class="miembro-info">
+                        <h3>Erick Romero</h3>
+                        <p>Director Nacional</p>
+                    </div>
+                </div>
+                <div class="miembro-card">
+                    <div class="miembro-imagen">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e" alt="Coordinadora de Programas">
+                    </div>
+                    <div class="miembro-info">
+                        <h3>María González</h3>
+                        <p>Coordinadora de Programas</p>
+                    </div>
+                </div>
+                <div class="miembro-card">
+                    <div class="miembro-imagen">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" alt="Director de Desarrollo">
+                    </div>
+                    <div class="miembro-info">
+                        <h3>Carlos Mendoza</h3>
+                        <p>Director de Desarrollo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Aldeas Infantiles SOS Honduras</h3>
+                    <p>Trabajando por el bienestar de la niñez hondureña desde 1970</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos en redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Tegucigalpa, Honduras</p>
+                    <p><i class="fas fa-phone"></i> +504 2235-8000</p>
+                    <p><i class="fas fa-envelope"></i> info@aldeasinfantiles.hn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aldeas Infantiles SOS Honduras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar toggle functionality
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+                navbarMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 

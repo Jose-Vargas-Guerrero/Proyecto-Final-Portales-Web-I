@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Aldeas Infantiles SOS Honduras</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .contacto-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+
+        .info-contacto {
+            padding: 2rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .info-contacto h3 {
+            color: #00a7e4;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item i {
+            color: #00a7e4;
+            font-size: 1.5rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .info-content {
+            flex: 1;
+        }
+
+        .info-content h4 {
+            color: #333333;
+            margin-bottom: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .info-content p {
+            color: #666666;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .horario-atencion {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .horario-atencion h4 {
+            color: #00a7e4;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .horario-lista {
+            list-style: none;
+            padding: 0;
+        }
+
+        .horario-lista li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            color: #666666;
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #00a7e4;
+            outline: none;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .contacto-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">Aldeas Infantiles SOS</a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/galeria.html">Galería</a></li>
+                <li><a href="/eventos.html">Eventos</a></li>
+                <li><a href="/faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="/donaciones.html">Donar</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+                <li><a href="/acerca.html">Acerca de</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 40vh;">
+        <div>
+            <h1>Contáctenos</h1>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section class="contacto-section">
+        <div class="container">
+            <div class="contacto-grid">
+                <div class="info-contacto">
+                    <h3>Información de Contacto</h3>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-content">
+                            <h4>Dirección</h4>
+                            <p>Colonia Kennedy, Calle Principal<br>Tegucigalpa, Honduras</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-content">
+                            <h4>Teléfonos</h4>
+                            <p>+504 2235-8000<br>+504 2235-8001</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-content">
+                            <h4>Correo Electrónico</h4>
+                            <p>info@aldeasinfantiles.hn<br>donaciones@aldeasinfantiles.hn</p>
+                        </div>
+                    </div>
+
+                    <div class="horario-atencion">
+                        <h4>Horario de Atención</h4>
+                        <ul class="horario-lista">
+                            <li>
+                                <span>Lunes a Viernes</span>
+                                <span>8:00 AM - 5:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Sábados</span>
+                                <span>9:00 AM - 1:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Domingos</span>
+                                <span>Cerrado</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <h3>Envíanos un Mensaje</h3>
+                    <form id="contactoForm" onsubmit="return validarFormulario(event)">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                            <div class="error-message" id="nombre-error">Por favor ingresa tu nombre completo</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message" id="email-error">Por favor ingresa un correo electrónico válido</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto">Asunto *</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="informacion">Solicitud de información</option>
+                                <option value="donacion">Información sobre donaciones</option>
+                                <option value="voluntariado">Voluntariado</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <div class="error-message" id="asunto-error">Por favor selecciona un asunto</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" required></textarea>
+                            <div class="error-message" id="mensaje-error">Por favor escribe tu mensaje</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Aldeas Infantiles SOS Honduras</h3>
+                    <p>Trabajando por el bienestar de la niñez hondureña desde 1970</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos en redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Tegucigalpa, Honduras</p>
+                    <p><i class="fas fa-phone"></i> +504 2235-8000</p>
+                    <p><i class="fas fa-envelope"></i> info@aldeasinfantiles.hn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aldeas Infantiles SOS Honduras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar toggle functionality
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+                navbarMenu.classList.remove('active');
+            }
+        });
+
+        // Form validation
+        function validarFormulario(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            // Validar nombre
+            const nombre = document.getElementById('nombre');
+            if (!nombre.value.trim() || nombre.value.length < 3) {
+                document.getElementById('nombre-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('nombre-error').style.display = 'none';
+            }
+
+            // Validar email
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                document.getElementById('email-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('email-error').style.display = 'none';
+            }
+
+            // Validar asunto
+            const asunto = document.getElementById('asunto');
+            if (!asunto.value) {
+                document.getElementById('asunto-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('asunto-error').style.display = 'none';
+            }
+
+            // Validar mensaje
+            const mensaje = document.getElementById('mensaje');
+            if (!mensaje.value.trim() || mensaje.value.length < 10) {
+                document.getElementById('mensaje-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('mensaje-error').style.display = 'none';
+            }
+
+            if (isValid) {
+                alert('¡Gracias por tu mensaje! Te responderemos lo antes posible.');
+                event.target.reset();
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html> 

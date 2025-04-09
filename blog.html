@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Aldeas Infantiles SOS Honduras</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .blog-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.05);
+        }
+
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+
+        .blog-card-date {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-card-date i {
+            color: #00a7e4;
+        }
+
+        .blog-card-title {
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .blog-card-excerpt {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .blog-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .blog-card:nth-child(1) { animation-delay: 0.1s; }
+        .blog-card:nth-child(2) { animation-delay: 0.2s; }
+        .blog-card:nth-child(3) { animation-delay: 0.3s; }
+        .blog-card:nth-child(4) { animation-delay: 0.4s; }
+        .blog-card:nth-child(5) { animation-delay: 0.5s; }
+        .blog-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @media (max-width: 992px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-card-image {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">Aldeas Infantiles SOS</a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/galeria.html">Galería</a></li>
+                <li><a href="/eventos.html">Eventos</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="/donaciones.html">Donar</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+                <li><a href="/acerca.html">Acerca de</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 40vh;">
+        <div>
+            <h1>Blog</h1>
+            <p>Historias que inspiran cambios</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://www.aldeasinfantiles.org.hn/getmedia/71294cab-67eb-4a2b-b4e1-e30330af9c9d/canarias-1_1.jpg" alt="Centro de Desarrollo Juvenil">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            15 de Marzo, 2024
+                        </div>
+                        <h3 class="blog-card-title">Nuevo Centro de Desarrollo Juvenil en Tegucigalpa</h3>
+                        <p class="blog-card-excerpt">La construcción del nuevo Centro de Desarrollo Juvenil, Familiar y Comunitario marca un hito en nuestro compromiso con la juventud hondureña. Este espacio brindará oportunidades de formación y desarrollo para más de 200 jóvenes.</p>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://www.aldeasinfantiles.org.hn/getmedia/d17aba4c-dec1-4b6b-89f2-33346decc57b/WhatsApp-Image-2024-08-15-at-2-55-59-PM-(1).jpeg" alt="Firma de Convenio USAID">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            10 de Marzo, 2024
+                        </div>
+                        <h3 class="blog-card-title">Alianza Estratégica con USAID para Educación</h3>
+                        <p class="blog-card-excerpt">Firmamos un importante convenio de subvención con USAID-RTI que permitirá fortalecer nuestros programas educativos y ampliar el alcance de nuestro impacto en la educación de niños y jóvenes.</p>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://www.aldeasinfantiles.org.hn/getmedia/c1a75764-a434-48b6-bedb-e7ec1517fb49/DIRECTOR-NACIONAL_1.jpeg" alt="Nuevo Director Nacional">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            18 de Marzo, 2024
+                        </div>
+                        <h3 class="blog-card-title">Bienvenida al Nuevo Director Nacional</h3>
+                        <p class="blog-card-excerpt">Nos complace dar la bienvenida a Erick Romero como nuevo Director Nacional. Su experiencia y visión fortalecerán nuestra misión de proteger y empoderar a la niñez hondureña.</p>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://www.aldeasinfantiles.org/getmedia/2204f34d-bbec-4a5d-853a-c7e19d75513f/IMG11.jpg" alt="Programa de Fortalecimiento Familiar">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            5 de Marzo, 2024
+                        </div>
+                        <h3 class="blog-card-title">Impacto del Programa de Fortalecimiento Familiar</h3>
+                        <p class="blog-card-excerpt">Celebramos los resultados del programa que ha beneficiado a más de 100 familias en situación vulnerable, proporcionando herramientas y apoyo para su desarrollo integral.</p>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://proceso.hn/wp-content/uploads/2015/05/1cda761ce8c73ccfd25f659f64ef12bd.jpg" alt="Graduación de Jóvenes">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            1 de Marzo, 2024
+                        </div>
+                        <h3 class="blog-card-title">Ceremonia de Graduación: Jóvenes SOS</h3>
+                        <p class="blog-card-excerpt">25 jóvenes de nuestro programa completaron exitosamente su formación técnica y profesional, marcando un nuevo capítulo en sus vidas hacia la independencia.</p>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://magazinedebut.com/wp-content/uploads/2024/04/IMG_1352-min-scaled.jpg" alt="Voluntarios en Acción">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-date">
+                            <i class="far fa-calendar-alt"></i>
+                            28 de Febrero, 2024
+                        </div>
+                        <h3 class="blog-card-title">Voluntarios: El Corazón de Nuestra Organización</h3>
+                        <p class="blog-card-excerpt">Reconocemos la labor invaluable de nuestros voluntarios que dedican su tiempo y esfuerzo para hacer una diferencia en la vida de los niños y jóvenes.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Aldeas Infantiles SOS Honduras</h3>
+                    <p>Trabajando por el bienestar de la niñez hondureña desde 1970</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos en redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Tegucigalpa, Honduras</p>
+                    <p><i class="fas fa-phone"></i> +504 2235-8000</p>
+                    <p><i class="fas fa-envelope"></i> info@aldeasinfantiles.hn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aldeas Infantiles SOS Honduras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar toggle functionality
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+                navbarMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 

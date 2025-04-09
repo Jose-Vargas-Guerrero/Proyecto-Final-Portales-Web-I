@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones - Aldeas Infantiles SOS Honduras</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .donaciones-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .donaciones-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+
+        .donaciones-info {
+            padding: 2rem;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .donaciones-info h3 {
+            color: #00a7e4;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 1.5rem;
+        }
+
+        .beneficios-lista {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .beneficios-lista li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: #333333;
+        }
+
+        .beneficios-lista i {
+            color: #00a7e4;
+            font-size: 1.2rem;
+        }
+
+        .metodos-pago {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .metodo-pago-icon {
+            font-size: 2rem;
+            color: #666666;
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #00a7e4;
+            outline: none;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .donaciones-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .metodos-pago {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">Aldeas Infantiles SOS</a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/galeria.html">Galería</a></li>
+                <li><a href="/eventos.html">Eventos</a></li>
+                <li><a href="/faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="/donaciones.html">Donar</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+                <li><a href="/acerca.html">Acerca de</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" style="height: 40vh;">
+        <div>
+            <h1>Haz una Donación</h1>
+        </div>
+    </section>
+
+    <section class="donaciones-section">
+        <div class="container">
+            <div class="donaciones-grid">
+                <div class="donaciones-info">
+                    <h3>¿Por qué donar?</h3>
+                    <p>Tu donación hace posible que niños y niñas en situación vulnerable tengan acceso a:</p>
+                    <ul class="beneficios-lista">
+                        <li>
+                            <i class="fas fa-home"></i>
+                            <span>Un hogar seguro y protector</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Educación de calidad</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Atención médica integral</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-utensils"></i>
+                            <span>Alimentación nutritiva</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-smile"></i>
+                            <span>Apoyo psicológico y emocional</span>
+                        </li>
+                    </ul>
+                    <h3>Métodos de pago aceptados</h3>
+                    <div class="metodos-pago">
+                        <i class="fab fa-cc-visa metodo-pago-icon"></i>
+                        <i class="fab fa-cc-mastercard metodo-pago-icon"></i>
+                        <i class="fab fa-cc-amex metodo-pago-icon"></i>
+                        <i class="fas fa-credit-card metodo-pago-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <h3>Formulario de Donación</h3>
+                    <form id="donacionForm" onsubmit="return validarFormulario(event)">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                            <div class="error-message" id="nombre-error">Por favor ingresa tu nombre completo</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message" id="email-error">Por favor ingresa un correo electrónico válido</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="monto">Monto a donar (Lps.) *</label>
+                            <input type="number" id="monto" name="monto" min="1" required>
+                            <div class="error-message" id="monto-error">Por favor ingresa un monto válido</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="frecuencia">Frecuencia de donación *</label>
+                            <select id="frecuencia" name="frecuencia" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="unica">Única vez</option>
+                                <option value="mensual">Mensual</option>
+                                <option value="trimestral">Trimestral</option>
+                                <option value="anual">Anual</option>
+                            </select>
+                            <div class="error-message" id="frecuencia-error">Por favor selecciona la frecuencia de donación</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Método de pago *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="tarjeta" name="metodo_pago" value="tarjeta" required>
+                                    <label for="tarjeta">Tarjeta de crédito</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="transferencia" name="metodo_pago" value="transferencia">
+                                    <label for="transferencia">Transferencia bancaria</label>
+                                </div>
+                            </div>
+                            <div class="error-message" id="metodo-error">Por favor selecciona un método de pago</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Realizar Donación</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Aldeas Infantiles SOS Honduras</h3>
+                    <p>Trabajando por el bienestar de la niñez hondureña desde 1970</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos en redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Tegucigalpa, Honduras</p>
+                    <p><i class="fas fa-phone"></i> +504 2235-8000</p>
+                    <p><i class="fas fa-envelope"></i> info@aldeasinfantiles.hn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aldeas Infantiles SOS Honduras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+                navbarMenu.classList.remove('active');
+            }
+        });
+
+        function validarFormulario(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            const nombre = document.getElementById('nombre');
+            if (!nombre.value.trim() || nombre.value.length < 3) {
+                document.getElementById('nombre-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('nombre-error').style.display = 'none';
+            }
+
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                document.getElementById('email-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('email-error').style.display = 'none';
+            }
+
+            const monto = document.getElementById('monto');
+            if (!monto.value || monto.value < 1) {
+                document.getElementById('monto-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('monto-error').style.display = 'none';
+            }
+
+            const frecuencia = document.getElementById('frecuencia');
+            if (!frecuencia.value) {
+                document.getElementById('frecuencia-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('frecuencia-error').style.display = 'none';
+            }
+
+            const metodoPago = document.querySelector('input[name="metodo_pago"]:checked');
+            if (!metodoPago) {
+                document.getElementById('metodo-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('metodo-error').style.display = 'none';
+            }
+
+            if (isValid) {
+                const submitButton = document.querySelector('button[type="submit"]');
+                const originalText = submitButton.innerHTML;
+                submitButton.disabled = true;
+                submitButton.innerHTML = 'Procesando...';
+
+                setTimeout(() => {
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'alert alert-success';
+                    successMessage.style.cssText = 'background-color: #d4edda; color: #155724; padding: 1rem; border-radius: 4px; margin-top: 1rem; text-align: center;';
+                    successMessage.innerHTML = `
+                        <h3 style="color: #155724; margin-bottom: 0.5rem;">¡Gracias por tu donación!</h3>
+                        <p style="margin-bottom: 0;">Hemos recibido tu solicitud de donación. Te enviaremos un correo electrónico a ${email.value} con los siguientes pasos para completar el proceso.</p>
+                    `;
+
+                    const form = document.querySelector('form');
+                    form.parentNode.insertBefore(successMessage, form);
+
+                    form.reset();
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalText;
+
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                    setTimeout(() => {
+                        successMessage.remove();
+                    }, 10000);
+                }, 1500);
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html> 
